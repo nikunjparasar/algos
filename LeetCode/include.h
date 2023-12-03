@@ -1,0 +1,63 @@
+#ifndef INCLUDE_H
+#define INCLUDE_H
+
+#include <vector>
+#include <unordered_set>
+#include <unordered_map>
+#include <map>
+#include <set>
+#include <queue>
+#include <stack>
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cmath>
+#include <climits>
+#include <cstring>
+#include <numeric>
+#include <functional>
+#include <iomanip>
+#include <cassert>
+#include <random>
+#include <chrono>
+#include <complex>
+#include <array>
+#include <list>
+#include <forward_list>
+#include <deque>
+#include <cctype>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+#include <cassert>
+#include <iterator>
+#include <valarray>
+#include <regex>
+#include <fstream>
+#include <type_traits>
+#include <typeinfo>
+#include <tuple>
+#include <utility>
+#include <initializer_list>
+#include <memory>
+#include <new>
+#include <stdexcept>
+#include <cassert>
+#include <cstddef>
+#include <cstdint>
+#include <ios>
+#include <iosfwd>
+#include <istream>
+#include <ostream>
+#include <streambuf>
+#include <locale>
+#include <codecvt>
+#include <exception>
+#include <system_error>
+#include <bitset>
+#include <functional>
+
+
+
+#endif
