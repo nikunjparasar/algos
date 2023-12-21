@@ -1,2 +1,1 @@
-# Ignore all files in a specific directory with a certain extension
-AdventCode/*.txt
+*.txt
