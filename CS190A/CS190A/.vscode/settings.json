@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "set": "cpp",
+        "ios": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "queue": "cpp",
+        "typeinfo": "cpp",
+        "string": "cpp",
+        "ostream": "cpp",
+        "iomanip": "cpp"
+    }
+}
