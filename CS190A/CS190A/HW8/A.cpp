@@ -11,24 +11,24 @@ public:
     
     void update(int index, int l, int r, int num){
         if (l == num && r == num) {
-            tree[index] = 1;
+            tree[index] = 1; // leaf node update
             return;
         }
 
-        if (num < l || num > r) return;
+        if (num < l || num > r) return; // not exist
         
         int mid = (l + r)/2;
         update(2 * index, l, mid, num);
         update(2 * index + 1, mid + 1, r, num);
         //both the child nodes have been updated, now update the parent node
-        tree[index] = tree[2 * index] + tree[2 * index + 1];
+        tree[index] = tree[2 * index] + tree[2 * index + 1]; // recurse up to the root
     }
 
 
-    int query(int index, int l, int r, int x, int y){
-        if(l >= x && r <= y) return tree[index];
-        if(r < x || l > y) return 0;
-        int mid = (l + r) / 2;
+    int query(int index, int l, int r, int x, int y){ 
+        if(l >= x && r <= y) return tree[index]; // down to one element
+        if(r < x || l > y) return 0; // not exist
+        int mid = (l + r) / 2; // check right and left subtrees
         return query(2 * index, l, mid, x, y) + query(2 * index + 1, mid + 1, r, x, y);
     } 
 
@@ -90,8 +90,8 @@ long long count_inv(vector<int>& a){
     long long ans = 0;
     SegTree tree(n);
     for(int i = 0; i < n; i++){
-        ans += tree.query(1, 1, n, a[i]+1, n);
-        tree.update(1, 1, n, a[i]);
+        ans += tree.query(1, 1, n, a[i]+1, n); // query from a[i] + 1 to n, (the number of elements from a[i] + 1 to n that appeared before)
+        tree.update(1, 1, n, a[i]);  // add a[i] to the tree
     }
     return ans;
 }

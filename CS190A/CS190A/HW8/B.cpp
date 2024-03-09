@@ -14,14 +14,14 @@ private:
             index /= 2;
             tree[index] = max(tree[2*index], tree[2*index + 1]); // left and right childs
         }
-        // cout << "tree: ";
-        // for(int i = 0; i < tree.size(); i++){
-        //     cout << tree[i] << " ";
-        // }
-        // cout << endl;
+        cout << "tree: ";
+        for(int i = 0; i < tree.size(); i++){
+            cout << tree[i] << " ";
+        }
+        cout << endl;
     }
 
-    int query(int l, int r) {
+    int query(int l, int r) { // # of increasing #s in [l, r) (LIS)
         int ans = 0;
         l += n;
         r += n;
@@ -44,7 +44,8 @@ public:
     int solve(const vector<int>& signals) {
         int max_signals = 0;
         for(int i = 0; i < signals.size(); i++){
-            int length = query(0, signals[i]) + 1; // length of LIS ending at signals[i]
+            int length = query(0, signals[i]) + 1; 
+            cout << "length: " << length << endl;   
             update(signals[i], length);
             max_signals = max(max_signals, length);
         }
